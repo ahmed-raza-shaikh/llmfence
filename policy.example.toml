@@ -1,0 +1,20 @@
+# Action applied to any detector not listed under [actions].
+# One of: "allow", "flag" (audit only), "redact", "block".
+default_action = "redact"
+
+# Prompt-injection score (0.0 - 1.0) at or above which `injection_action` applies.
+injection_threshold = 0.5
+injection_action = "block"
+
+# Redact PII and secrets that appear in model responses (non-streaming only).
+scan_responses = true
+
+# Maximum accepted request body size.
+max_body_bytes = 4194304
+
+[actions]
+ip_address = "flag"
+private_key = "block"
+aws_access_key = "block"
+credit_card = "redact"
+ssn = "redact"

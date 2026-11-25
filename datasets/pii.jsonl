@@ -1,0 +1,65 @@
+{"text":"Please send the invoice to maria.gonzalez@contoso.com by Friday.","labels":["email"]}
+{"text":"CC: j.smith+billing@sub.example.co.uk and ops@fabrikam.io","labels":["email"]}
+{"text":"Customer phone is (415) 555-0132, call after 5pm.","labels":["phone"]}
+{"text":"Reach me at +1 212 555 0198 or on Teams.","labels":["phone"]}
+{"text":"UK mobile: +447911123456","labels":["phone"]}
+{"text":"Office line 646.555.0147 ext 22","labels":["phone"]}
+{"text":"Contact HR: +91 98765 43210","labels":["phone"]}
+{"text":"Berlin office: +49 30 12345678","labels":["phone"]}
+{"text":"London desk +44 20 7946 0958","labels":["phone"]}
+{"text":"Charge card 4111 1111 1111 1111 exp 09/27 for the renewal.","labels":["credit_card"]}
+{"text":"Mastercard on file: 5555-5555-5555-4444","labels":["credit_card"]}
+{"text":"Amex 378282246310005 was declined","labels":["credit_card"]}
+{"text":"Discover 6011 1111 1111 1117, billing zip 94105","labels":["credit_card"]}
+{"text":"Card number: 4012888888881881","labels":["credit_card"]}
+{"text":"Employee SSN 078-05-1120 needs to be updated in Workday.","labels":["ssn"]}
+{"text":"Applicant social security number: 219-09-9999","labels":["ssn"]}
+{"text":"Wire to IBAN GB82 WEST 1234 5698 7654 32 today.","labels":["iban"]}
+{"text":"Supplier account DE89370400440532013000","labels":["iban"]}
+{"text":"French vendor IBAN FR14 2004 1010 0505 0001 3M02 606","labels":["iban"]}
+{"text":"The breach originated from 203.0.113.45 at 02:14 UTC.","labels":["ip_address"]}
+{"text":"Whitelist 192.168.10.25 and 10.0.0.1 on the firewall","labels":["ip_address"]}
+{"text":"Server 2001:db8::1 and 198.51.100.7 are in scope","labels":["ip_address"]}
+{"text":"aws_access_key_id = \u0041KIAIOSFODNN7EXAMPLE","labels":["aws_access_key"]}
+{"text":"Temporary creds \u0041SIAY34FZKBOKMUTVV7A were found in the build log","labels":["aws_access_key"]}
+{"text":"Use token \u0067hp_EXAMPLEexampleEXAMPLEexample0000aaaa to clone the repo","labels":["github_token"]}
+{"text":"Bot token \u0078oxb-EXAMPLE-000000000000-abcdefghij posted in #general","labels":["slack_token"]}
+{"text":"OPENAI key \u0073k-proj-EXAMPLEexampleEXAMPLE0000xyz leaked in a notebook","labels":["llm_api_key"]}
+{"text":"anthropic key \u0073k-ant-api03-EXAMPLEexampleEXAMPLEexample00","labels":["llm_api_key"]}
+{"text":"-----BEGIN OPENSSH \u0050RIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmU\n-----END OPENSSH \u0050RIVATE KEY-----","labels":["private_key"]}
+{"text":"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0.dozjgNryP4J3jVmNHl0w5N_XgL0n3I9PlFUP0THsR8U","labels":["jwt"]}
+{"text":"DB_PASSWORD=Tr0ub4dor&3xyz","labels":["password"]}
+{"text":"config: {\"client_secret\": \"9f8e7d6c5b4a\"}","labels":["password"]}
+{"text":"login with username admin and password: Winter2024!","labels":["password"]}
+{"text":"api_key: 3c9d1b7e2a5f4c8d","labels":["password"]}
+{"text":"MongoDB URI with password=Sup3rS3cret! in the connection string","labels":["password"]}
+{"text":"Hi, I'm Tom (tom.baker@northwind.com, 312-555-0175). My card 5105 1051 0510 5100 was charged twice.","labels":["email","phone","credit_card"]}
+{"text":"Patient record: SSN 123-45-6789, contact +1 (617) 555-0123, email p.jones@clinic.org","labels":["ssn","phone","email"]}
+{"text":"Deploy log: connecting to 172.16.4.20 with \u0041KIAI44QH8DHBEXAMPLE","labels":["ip_address","aws_access_key"]}
+{"text":"Refund to IBAN DE89 3704 0044 0532 0130 00 and email the receipt to finance@contoso.com","labels":["iban","email"]}
+{"text":"export GITHUB_TOKEN=\u0067hp_EXAMPLEexampleEXAMPLEexample1111bbbb\nexport DB_PASSWORD=hunter2hunter2","labels":["github_token","password"]}
+{"text":"Send the W-2 to r.patel@globex.com; SSN on file 345-67-8901.","labels":["email","ssn"]}
+{"text":"Summarize the attached quarterly report in five bullet points.","labels":[]}
+{"text":"The meeting is on 2024-05-17 at 10:30 in room 4B.","labels":[]}
+{"text":"Our revenue grew 12.5% to $4,250,000 in FY2024.","labels":[]}
+{"text":"ISBN 978-3-16-148410-0 is the reference edition.","labels":[]}
+{"text":"Order number 4111 1111 1111 1112 has shipped.","labels":[]}
+{"text":"Invalid SSN examples: 666-45-6789 and 900-12-3456.","labels":[]}
+{"text":"Upgrade the cluster from build v10.4.2.1 to the latest patch.","labels":[]}
+{"text":"The IBAN GB82 WEST 1234 5698 7654 33 failed validation.","labels":[]}
+{"text":"Email the team at the usual address, not the personal one.","labels":[]}
+{"text":"Reset your password using the self-service portal.","labels":[]}
+{"text":"Set the API key in the vault, never in code.","labels":[]}
+{"text":"Our office is at 1600 Amphitheatre Parkway, Mountain View.","labels":[]}
+{"text":"Ticket INC-2024-000123 was escalated to tier 2.","labels":[]}
+{"text":"Use the \u0041KIA prefix to recognize AWS access keys.","labels":[]}
+{"text":"Employee ID 4532 and badge 7781 are active.","labels":[]}
+{"text":"The sk-learn library has a train_test_split helper.","labels":[]}
+{"text":"Rate limit is 1000 requests per 60 seconds per tenant.","labels":[]}
+{"text":"Coordinates: 37.7749, -122.4194","labels":[]}
+{"text":"Version 2.14.0 fixed CVE-2024-3094 in xz-utils.","labels":[]}
+{"text":"Call the main switchboard and ask for extension 2211.","labels":[]}
+{"text":"Run `kubectl get pods -n payments` and share the output.","labels":[]}
+{"text":"Phone numbers must be stored in E.164 format.","labels":[]}
+{"text":"Our Slack workspace uses the #incident-response channel.","labels":[]}
+{"text":"Password: must be at least 14 characters long.","labels":[]}
