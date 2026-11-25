@@ -11,6 +11,7 @@
   <a href="#accuracy-and-performance"><img alt="Inspection latency 7.4 µs per KB" src="https://img.shields.io/badge/inspection-7.4_%C2%B5s%2FKB-1A1916?style=flat-square"></a>
   <a href="#accuracy-and-performance"><img alt="PII recall 100%" src="https://img.shields.io/badge/PII_recall-100%25-1A1916?style=flat-square"></a>
   <a href="#use-it-from-any-openai-sdk"><img alt="OpenAI compatible" src="https://img.shields.io/badge/API-OpenAI_compatible-1A1916?style=flat-square"></a>
+  <a href="https://crates.io/crates/llmfence"><img alt="crates.io" src="https://img.shields.io/crates/v/llmfence?style=flat-square&color=1A1916"></a>
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-1A1916?style=flat-square"></a>
 </p>
 
@@ -37,7 +38,7 @@
 ## Quick start
 
 ```bash
-cargo install --git https://github.com/ahmed-raza-shaikh/llmfence
+cargo install llmfence
 
 llmfence serve \
   --upstream https://api.openai.com \
