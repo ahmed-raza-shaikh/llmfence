@@ -1,7 +1,16 @@
 [package]
-name = "ai-governance-gateway"
+name = "llmfence"
 version = "0.1.0"
 edition = "2024"
+description = "LLM firewall and AI DLP gateway: OpenAI-compatible proxy that redacts PII and secrets, blocks prompt injection and writes privacy-preserving audit logs."
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/ahmed-raza-shaikh/llmfence"
+homepage = "https://github.com/ahmed-raza-shaikh/llmfence"
+keywords = ["llm", "firewall", "dlp", "prompt-injection", "pii"]
+categories = ["command-line-utilities", "web-programming::http-server", "network-programming"]
+authors = ["Ahmed Raza Shaikh"]
+exclude = ["assets/*", "target/*"]
 
 [dependencies]
 anyhow = "1"

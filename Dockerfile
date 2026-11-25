@@ -4,9 +4,9 @@ COPY . .
 RUN cargo build --release --locked
 
 FROM gcr.io/distroless/cc-debian12:nonroot
-COPY --from=build /src/target/release/ai-governance-gateway /usr/local/bin/ai-governance-gateway
+COPY --from=build /src/target/release/llmfence /usr/local/bin/llmfence
 COPY policy.example.toml /etc/gateway/policy.toml
-ENV GATEWAY_LISTEN=0.0.0.0:8080 \
-    GATEWAY_POLICY=/etc/gateway/policy.toml
+ENV LLMFENCE_LISTEN=0.0.0.0:8080 \
+    LLMFENCE_POLICY=/etc/gateway/policy.toml
 EXPOSE 8080
-ENTRYPOINT ["ai-governance-gateway", "serve"]
+ENTRYPOINT ["llmfence", "serve"]

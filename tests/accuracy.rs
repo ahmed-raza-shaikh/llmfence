@@ -1,6 +1,6 @@
 //! Regression gate: detection quality on the bundled datasets must not drop.
 
-use ai_governance_gateway::eval;
+use llmfence::eval;
 use std::path::Path;
 
 #[test]

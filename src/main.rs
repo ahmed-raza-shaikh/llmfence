@@ -1,9 +1,9 @@
-use ai_governance_gateway::audit::AuditLog;
-use ai_governance_gateway::engine::{Direction, Guard};
-use ai_governance_gateway::policy::Policy;
-use ai_governance_gateway::{eval, server};
 use anyhow::Context;
 use clap::{Parser, Subcommand};
+use llmfence::audit::AuditLog;
+use llmfence::engine::{Direction, Guard};
+use llmfence::policy::Policy;
+use llmfence::{eval, server};
 use std::io::Read;
 use std::net::SocketAddr;
 use std::path::PathBuf;
@@ -21,19 +21,19 @@ struct Cli {
 enum Cmd {
     /// Run the OpenAI-compatible proxy.
     Serve {
-        #[arg(long, env = "GATEWAY_LISTEN", default_value = "127.0.0.1:8080")]
+        #[arg(long, env = "LLMFENCE_LISTEN", default_value = "127.0.0.1:8080")]
         listen: SocketAddr,
         #[arg(
             long,
-            env = "GATEWAY_UPSTREAM",
+            env = "LLMFENCE_UPSTREAM",
             default_value = "https://api.openai.com"
         )]
         upstream: String,
-        #[arg(long, env = "GATEWAY_POLICY")]
+        #[arg(long, env = "LLMFENCE_POLICY")]
         policy: Option<PathBuf>,
-        #[arg(long, env = "GATEWAY_AUDIT_LOG")]
+        #[arg(long, env = "LLMFENCE_AUDIT_LOG")]
         audit_log: Option<PathBuf>,
-        #[arg(long, env = "GATEWAY_UPSTREAM_TIMEOUT_SECS", default_value_t = 120)]
+        #[arg(long, env = "LLMFENCE_UPSTREAM_TIMEOUT_SECS", default_value_t = 120)]
         upstream_timeout_secs: u64,
     },
     /// Inspect a file (or stdin) and print the decision as JSON.

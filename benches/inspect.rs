@@ -1,6 +1,6 @@
-use ai_governance_gateway::engine::{Direction, Guard};
-use ai_governance_gateway::policy::Policy;
 use criterion::{Criterion, Throughput, criterion_group, criterion_main};
+use llmfence::engine::{Direction, Guard};
+use llmfence::policy::Policy;
 use std::hint::black_box;
 
 fn corpus(target: usize, with_pii: bool) -> String {
@@ -35,13 +35,13 @@ fn bench(c: &mut Criterion) {
     let mut group = c.benchmark_group("components_clean_16kb");
     group.throughput(Throughput::Bytes(text.len() as u64));
     group.bench_function("detect", |b| {
-        b.iter(|| ai_governance_gateway::detect::scan(black_box(&text)))
+        b.iter(|| llmfence::detect::scan(black_box(&text)))
     });
     group.bench_function("normalize", |b| {
-        b.iter(|| ai_governance_gateway::injection::normalize(black_box(&text)))
+        b.iter(|| llmfence::injection::normalize(black_box(&text)))
     });
     group.bench_function("injection", |b| {
-        b.iter(|| ai_governance_gateway::injection::score(black_box(&text)))
+        b.iter(|| llmfence::injection::score(black_box(&text)))
     });
     group.finish();
 }

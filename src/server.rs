@@ -232,7 +232,7 @@ async fn chat_completions(
         h.insert("x-request-id", v);
     }
     h.insert(
-        "x-guard-decision",
+        "x-llmfence-decision",
         HeaderValue::from_static(summary.decision()),
     );
     response

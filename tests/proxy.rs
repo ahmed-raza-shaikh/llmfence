@@ -1,12 +1,12 @@
-use ai_governance_gateway::audit::AuditLog;
-use ai_governance_gateway::engine::Guard;
-use ai_governance_gateway::policy::Policy;
-use ai_governance_gateway::server::{AppState, router};
 use axum::body::Body;
 use axum::http::{Request, StatusCode};
 use axum::routing::post;
 use axum::{Json, Router};
 use http_body_util::BodyExt;
+use llmfence::audit::AuditLog;
+use llmfence::engine::Guard;
+use llmfence::policy::Policy;
+use llmfence::server::{AppState, router};
 use serde_json::{Value, json};
 use std::sync::Arc;
 use tower::ServiceExt;
@@ -65,7 +65,7 @@ async fn call(app: Router, body: Value) -> (StatusCode, Value, String) {
         .await
         .unwrap();
     let status = resp.status();
-    let decision = resp.headers()["x-guard-decision"]
+    let decision = resp.headers()["x-llmfence-decision"]
         .to_str()
         .unwrap()
         .to_string();
